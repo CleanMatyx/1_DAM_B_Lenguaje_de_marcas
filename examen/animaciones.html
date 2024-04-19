@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #elemento1 {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            background-color: lightgreen;
+            animation: cambioTamanyo 2s infinite alternate;
+        }
+
+        @keyframes cambioTamanyo {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        #elemento2 {
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: yellow;
+            border: 3px solid red;
+            animation: desplazamiento 2s infinite alternate;
+        }
+
+        @keyframes desplazamiento {
+            0% { transform: translateX(left 0); }
+            100% { transform: translateX(100px); }
+        }
+
+        #elemento3 {
+            width: 250px;
+            height: 150px;
+            border: 5px solid blue;
+            background-color: white;
+            animation: cambioOpacidad 2s infinite alternate;
+        }
+
+        @keyframes cambioOpacidad {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+    </style>
+    <title>Animaciones</title>
+</head>
+<body>
+    <div id="elemento1"></div>
+    <div id="elemento2"></div>
+    <div id="elemento3"></div>
+</body>
+</html>

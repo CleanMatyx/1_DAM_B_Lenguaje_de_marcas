@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Matrícula</title>
+</head>
+<body>
+    <h1>Formulario Matrícula</h1>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" size="35" required 
+                    pattern="[A-Za-záéíóúüÁÉÍÓÚÜ ]{2,40}" maxlength="40"><br><br>
+
+            <label for="Apellidos">Apellidos: </label>
+                <input type="text" id="apellidos" name="apellidos" size="35"
+                    required pattern="[A-Za-záéíóúüÁÉÍÓÚÜ ]{2,40}" maxlength="40"><br><br>
+
+            <label for="correo">E-mail: </label>
+                <input type="email" id="correo" name="correo" size="35"
+                    required pattern="[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}" maxlength="40"><br><br>
+
+            <label for="dni">DNI: </label>
+                <input type="text" id="dni" name="dni" size="35" 
+                    required pattern="\d{8}[A-Za-z]" title="8 dígitos y una letra mayúscula o minúscula"><br><br>
+
+            <label for="contrasenya">Contraseña: </label>
+                <input type="password" id="contrasenya" name="contrasenya" size="35" 
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8}" minlength="8" maxlength="8"
+                        title="Debe incluir números, caracteres, al menos una mayúscula y un carácter
+                            especial"><br><br>
+            
+            <label for="re-contrasenya">Confirmar Contraseña: </label>
+                <input type="password" id="re-contrasenya" name="re-contrasenya" size="35" 
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8}" minlength="8" maxlength="8" 
+                        title="Debe incluir números, caracteres, al menos una mayúscula y un carácter
+                            especial"><br><br>
+            </select>
+        </fieldset><br><br><br>
+
+        <fieldset>
+            <legend>Matrícula</legend>
+
+            <label for="fechaNacimiento">Fecha de nacimiento: </label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+
+            <label for="hermanos">Hermanos en el centro: </label>
+                <input type="number" id="cantHermanos" name="cantHermanos" min="0" 
+                max="10" step="1" size="50"></label><br><br>
+
+            <label for="telefono">Teléfono móvil de contacto</label>
+                <input type="tel" id="telefono" name="telefono" size="25"
+                    required pattern="^[678][0-9]{8}$" maxlength="9" placeholder="9 dígitos empezando por 6, 7, 8 o 9"><br><br>
+
+                <label for="ciclo">Ciclo seleccionado:</label>
+                <select id="ciclo" name="ciclo">
+                    <option value="dam">ASIR</option>
+                    <option value="daw">DAM</option>
+                    <option value="asir">DAW</option>
+                </select>
+        </fieldset><br><br>
+        
+        <input type="submit" value="Enviar" onclick="return validarFormulario()">
+        
+    </form>
+    
+
+    <script>
+    function validarFormulario() {
+        var nombre = document.getElementById('nombre').value;
+        var contrasenya = document.getElementById('contrasenya').value;
+        var reContrasenya = document.getElementById('re-contrasenya').value;
+        var fechaNacimiento = document.getElementById('fechaNacimiento').value;
+        var cantHermanos = document.getElementById('cantHermanos').value;
+        var telefono = document.getElementById('telefono').value;
+
+        if (nombre == '') {
+            alert('Por favor, introduce tu nombre');
+            return false;
+        }
+
+        if (contrasenya == '' || contrasenya.length < 8) {
+            alert('La contraseña no es válida');
+            return false;
+        }
+
+        if (contrasenya != reContrasenya) {
+            alert('Las contraseñas deben coincidir');
+            return false;
+        }
+
+        if (telefono == '') {
+            alert('Por favor, introduce tu número de teléfono');
+            return false;
+        }
+
+        if(telefono.length != 9){
+            alert('El número de teléfono no es válido');
+            return false;
+        }
+
+        
+
+
+
+        return true;
+    }
+    </script>
+</body>
+</html>

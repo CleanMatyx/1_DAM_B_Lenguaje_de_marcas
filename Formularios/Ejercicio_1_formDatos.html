@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Datos Personales</title>
+</head>
+<body>
+    <h1>Rellena tus datos</h1>
+    <form>
+        <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" size="25"><br>
+
+        <label for="apellidos">Apellidos:</label><br>
+            <input type="text" id="apellidos" name="apellidos" size="50"><br>
+
+        <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" size="50"><br>
+
+        <label for="dni">DNI:</label><br>
+            <input type="text" id="dni" name="dni" size="20"><br><br>
+
+        <label for="idioma">Idioma Materno:</label><br>
+            <input type="radio" name="idioma" value="Castellano">Castellano
+                <br>
+                <input type="radio" name="idioma" value="frances">Valenciano
+                <br>
+                <input type="radio" name="idioma" value="frances">Otros
+                <br><br>
+                
+        <label for="archivo">Subir mi foto </label>
+            <input type="file" id="archivo" name="archivo"><br><br>
+            <input type="checkbox" name="casado"> Permitir que otros puedan ver mis datos <br><br>
+
+        <input type="submit" value="Guardar cambios">
+        <input type="reset" value="Borrar los datos introducidos">
+    </form>
+</body>
+</html>

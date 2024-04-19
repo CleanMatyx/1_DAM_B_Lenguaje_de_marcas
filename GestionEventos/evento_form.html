@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verificarValor(input) {
+            if(input.value.trim() === '') {
+                input.style.backgroundColor = 'red';
+            } else {
+                input.style.backgroundColor = 'white';
+            }
+        }
+
+        function cambiarColor(input) {
+            input.style.backgroundColor = 'yellow';
+        }
+    </script>
+</head>
+<body>
+    <h1>Registro de usuario</h1>
+    <form action="evento_form.php" method="post">
+        Nombre:<input type="text" name="nombre" id="nombre" onblur="verificarValor(this)" onfocus="cambiarColor(this)"><br><br>
+        Email:<input type="text" name="email" id="email" onblur="verificarValor(this)" onfocus="cambiarColor(this)"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

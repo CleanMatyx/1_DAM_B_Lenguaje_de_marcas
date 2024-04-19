@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Información de producto</title>
+</head>
+<body>
+    <h2>Información sobre el producto</h2>
+    <form>
+        <fieldset>
+            <legend>Datos básicos</legend>
+
+            <label for="nombre">Nombre</label><br>
+                <input type="text" id="nombre" name="nombre" size="50"><br><br>
+
+            <label for="descripcion">Descripción<br>
+                <textarea name="descripcion" id="descripcion" cols="50" rows="5"></textarea></label><br><br>
+
+
+            <label for="archivo">Foto  
+                <input type="url" id="directorio" name="directorio">
+                <input type="submit" value="Elegir..."><br><br>
+                
+            </label>
+            <input type="checkbox" name="añadir"> Añadir contador de visitas <br><br>
+
+            </select>
+        </fieldset><br>
+        <fieldset>
+            <legend>Datos económicos</legend>
+
+            <label for="precio">Precio
+                <input type="number" id="iva" name="iva" min="0" max="100" step="0.01" size=""> €</label>
+                <label for="ciclo">
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="impuesto">Impuestos</label>
+            <select id="IVA" name="impuesto">
+                <option value="4%">4%</option>
+                <option value="7%">7%</option>
+                <option value="16%">16%</option>
+                <option value="25%">25%</option>
+            </select><br></label><br>
+
+            <label for="promocion">Promoción:</label><br>
+                <input type="radio" name="promocion" value="ninguno">Ninguno
+                <br>
+                <input type="radio" name="promocion" value="transporte">Transporte gratuito
+                <br>
+                <input type="radio" name="promocion" value="descuento">Descuento 5%
+                <br><br>
+
+            
+
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

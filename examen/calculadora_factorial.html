@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            text-align: center;
+        }
+        div {
+            background-color: white;
+            margin: 0 auto;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>Calculadora de Factorial</title>
+    
+</head>
+<body>
+    <div>
+    <h1>Calculadora de Factorial</h1>
+        <h2>El factorial de un número entero positivo n, denotado por n!</h2><br> 
+        <h2>Es el producto de todos los números enteros positivos menores o iguales a n.</h2><br>
+        <h2>Por ejemplo, el factorial de 5 es 5! = 5 * 4 * 3 * 2 * 1 = 120.</h2>
+    <br><br>
+    <script>
+        do{
+            var num = prompt("Ingrese un número entero positivo:");
+            num = parseInt(num);
+        }while(isNaN(num) || num < 0);
+        var factorial = calcularFactorial(num);
+        document.write("El factorial de " + num + " es " + factorial);
+        
+        function calcularFactorial(num) {
+            var factorial = 1;
+            if(num == 0){
+                factorial = 0;
+            }else{
+                for(var i = 2; i <= num; i++) {
+                factorial *= i;
+                }
+            }
+            return factorial;
+        }
+    </script>
+    </div>
+</body>
+</html>
